@@ -1,0 +1,12 @@
+{
+  "name": "esbuild-babel-plugin",
+  "version": "0.1.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.24.0"
+  },
+  "peerDependencies": {
+    "esbuild": "^0.20.0"
+  }
+}
