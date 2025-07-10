@@ -1,4 +1,6 @@
-# esbuild-babel-plugin
+<img width="1364" height="460" alt="Untitled" src="https://github.com/user-attachments/assets/44638ca2-798a-40c6-99d1-ccdf4f4a6edc" />
+
+
 
 A minimal **esbuild** plugin that loads the files matching the filter regex through **Babel**’s `transformSync()`.  
 Use it when you need Babel presets or custom plugins in an esbuild pipeline.
@@ -8,7 +10,7 @@ Use it when you need Babel presets or custom plugins in an esbuild pipeline.
 ## Installation
 
 ```sh
-npm install --save-dev esbuild @babel/core
+npm install --save-dev esbuild @babel/core esbuild-babel-plugin
 
 # plus any presets/plugins you need, e.g. (don't take it literally)
 npm install --save-dev @babel/preset-react @babel/preset-typescript @babel/plugin-transform-runtime
