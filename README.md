@@ -9,13 +9,15 @@ Use it when you need Babel presets or custom plugins in an esbuild pipeline.
 
 ```sh
 npm install --save-dev esbuild @babel/core
-# plus any presets/plugins you need, e.g.
-npm install --save-dev @babel/preset-react @babel/preset-typescript
+
+# plus any presets/plugins you need, e.g. (don't take it literally)
+npm install --save-dev @babel/preset-react @babel/preset-typescript @babel/plugin-transform-runtime
 ```
 
 ---
 
 ## Basic usage
+These presets and plugis are a bad choice but they are fairly known so I thought of using them in the example.
 
 ```js
 const esbuild = require("esbuild");
@@ -28,7 +30,15 @@ esbuild.build({
   plugins: [
     babel({
       filter: /\.(jsx|tsx)$/,
-      plugins: ["./babel-plugin-preact-jsx-signals"]
+      config: {
+        presets: [
+          ["@babel/preset-react", { runtime: "automatic", importSource: "preact" }],
+          "@babel/preset-typescript"
+        ],
+        plugins: [
+          "@babel/plugin-transform-runtime"
+        ]
+      }
     })
   ],
   loader: { ".ts": "ts", ".tsx": "tsx" }
