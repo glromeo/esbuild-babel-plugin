@@ -23,7 +23,7 @@ These presets and plugis are a bad choice but they are fairly known so I thought
 
 ```js
 const esbuild = require("esbuild");
-const babel   = require("./esbuild-babel-plugin");
+const babel   = require("esbuild-babel-plugin");
 
 esbuild.build({
   entryPoints: ["src/index.tsx"],
